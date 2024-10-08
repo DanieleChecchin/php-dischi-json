@@ -21,15 +21,17 @@
 <body>
     <div id="app">
 
-        <header class="d-flex justify-content-center align-items-center">
-            <h1 class="fw-bold text-white">PHP DISCHI JSON</h1>
+        <header>
+            <div class="container d-flex align-items-center">
+                <img class="mt-4" src="./img/logo-spotify.jpg" alt="logo spotify">
+            </div>
         </header>
 
         <main class="py-5">
             <div class="container text-center text-white d-flex justify-content-between flex-wrap">
                 <div class="disk text-white card mb-5 p-4" style="width: 18rem;" v-for="(disk, index) in disksList"
                     :key="index">
-                    <img :src="disk.poster" class="card-img-top" alt="...">
+                    <img :src="disk.poster" class="card-img-top" alt="disk's image">
                     <div class="card-body">
                         <h5 class="card-title fw-bold"> {{ disk.title }} </h5>
                         <h4 class="fw-normal fs-5"> {{ disk.author }} </h4>
