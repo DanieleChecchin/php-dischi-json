@@ -21,19 +21,19 @@
 <body>
     <div id="app">
 
-        <header>
-
+        <header class="d-flex justify-content-center align-items-center">
+            <h1 class="fw-bold text-white">PHP DISCHI JSON</h1>
         </header>
 
         <main class="py-5">
-            <div class="container text-center text-white d-flex justify-content-between">
-                <div class="card" style="width: 18rem;" v-for="(disk, index) in disksList" :key="index">
-                    <img src="..." class="card-img-top" alt="...">
+            <div class="container text-center text-white d-flex justify-content-between flex-wrap">
+                <div class="disk text-white card mb-5 p-4" style="width: 18rem;" v-for="(disk, index) in disksList"
+                    :key="index">
+                    <img :src="disk.poster" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title"> {{}} </h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title fw-bold"> {{ disk.title }} </h5>
+                        <h4 class="fw-normal fs-5"> {{ disk.author }} </h4>
+                        <h5 class="card-title fw-bold"> {{ disk.year }} </h5>
                     </div>
                 </div>
             </div>
